@@ -23,7 +23,8 @@ function wordload(){
    $.get('smpl.txt', function(data) {
    var lines = data.split("\n");
    lines.map(function(x){ return x.toUpperCase() })
-   console.log(lines[0]);
+   //console.log(lines[0]);
+   window.alert(lines[0]);
 });
 }
 
