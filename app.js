@@ -18,13 +18,12 @@ for (var i = 0; i < blkspaces.length; i++){
 	blkspaces[i] = "_ ";
 }
 
-function wordload(){
-   console.log("Hello!");
-   $.get('smpl.txt', function(data) {
-   var lines = data.split("\n");
-   lines.map(function(x){ return x.toUpperCase() })
+function wordload(){   
+	window.alert("Hello!");
+	$.get('smpl.txt', function(data) {
+	var lines = data.split("\n");
+	lines.map(function(x){ return x.toUpperCase() })
    //console.log(lines[0]);
-   window.alert(lines[0]);
 });
 }
 
