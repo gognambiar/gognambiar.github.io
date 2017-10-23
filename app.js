@@ -8,7 +8,7 @@
 ]*/
 $.get('smpl.txt', function(data) {
 	var lstofwords = data.split("\n");
-	lstofwords.map(function(x){ return x.toUpperCase() })
+	lstofwords.map(function(x){ return x.toUpperCase() });
 
 var random = Math.floor((Math.random()*(lstofwords.length-1))); 
 
