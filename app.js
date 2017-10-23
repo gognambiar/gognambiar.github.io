@@ -6,6 +6,9 @@
   ["C","H","O","C","O","L","A","T","E"],
   ["G","E","R","M","A","N","Y"]
 ]*/
+$.get('smpl.txt', function(data) {
+	var lstofwords = data.split("\n");
+	lstofwords.map(function(x){ return x.toUpperCase() })
 
 var random = Math.floor((Math.random()*(lstofwords.length-1))); 
 
@@ -16,14 +19,6 @@ var numattempts = 0;
 // every letter in the word is symbolized by an underscore in the guessfield
 for (var i = 0; i < blkspaces.length; i++){
 	blkspaces[i] = "_ ";
-}
-
-function wordload(){   
-	window.alert("Hello!");
-	$.get('smpl.txt', function(data) {
-	var lstofwords = data.split("\n");
-	lstofwords.map(function(x){ return x.toUpperCase() })
-});
 }
 
 // prints the guessfield
