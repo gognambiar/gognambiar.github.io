@@ -6,10 +6,7 @@ var lstofwords = [
   ["C","H","O","C","O","L","A","T","E"],
   ["G","E","R","M","A","N","Y"]
 ]
-/*$.get('smpl.txt', function(data) {
-	var lstofwords = data.split("\n");
-	lstofwords.map(function(x){ return x.toUpperCase() });
-*/
+
 var random = Math.floor((Math.random()*(lstofwords.length-1))); 
 
 var nword = lstofwords[random]; // the word to guess will be chosen from the array above
@@ -20,6 +17,14 @@ var numattempts = 0;
 for (var i = 0; i < blkspaces.length; i++){
 	blkspaces[i] = "_ ";
 }
+
+/*function wordload(){
+   $.get('smpl.txt', function(data) {
+    var lines = data.split("\n");
+    lines.map(function(x){ return x.toUpperCase() })
+    console.log(lines[0]);
+});
+}*/
 
 // prints the guessfield
 function printblkspaces(){
@@ -78,6 +83,7 @@ var checkLetter = function(){
 }
 
 function init(){
+	//wordload();
 	printblkspaces();
 }
 
