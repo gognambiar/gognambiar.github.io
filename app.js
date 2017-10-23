@@ -19,10 +19,11 @@ for (var i = 0; i < blkspaces.length; i++){
 }
 
 function wordload(){
+   console.log("Hello!");
    $.get('smpl.txt', function(data) {
-    var lines = data.split("\n");
-    lines.map(function(x){ return x.toUpperCase() })
-    console.log(lines[0]);
+   var lines = data.split("\n");
+   lines.map(function(x){ return x.toUpperCase() })
+   console.log(lines[0]);
 });
 }
 
