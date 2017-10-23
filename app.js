@@ -84,6 +84,7 @@ var checkLetter = function(){
 }
 
 function init(){
+	window.alert("Hello!");
 	wordload();
 	printblkspaces();
 }
