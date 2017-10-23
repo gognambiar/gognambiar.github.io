@@ -1,15 +1,15 @@
-/*var lstofwords = [
+var lstofwords = [
 ["T", "R", "E", "E", "H", "O", "U", "S", "E"],
   ["J","A","V","A","S","C","R","I","P","T"],
   ["W","E","B","D","E","S","I","G","N"],
   ["E","D","U","C","A","T","I","O","N"],
   ["C","H","O","C","O","L","A","T","E"],
   ["G","E","R","M","A","N","Y"]
-]*/
-$.get('smpl.txt', function(data) {
+]
+/*$.get('smpl.txt', function(data) {
 	var lstofwords = data.split("\n");
 	lstofwords.map(function(x){ return x.toUpperCase() });
-
+*/
 var random = Math.floor((Math.random()*(lstofwords.length-1))); 
 
 var nword = lstofwords[random]; // the word to guess will be chosen from the array above
