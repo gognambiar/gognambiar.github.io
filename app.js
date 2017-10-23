@@ -1,11 +1,11 @@
-var lstofwords = [
+/*var lstofwords = [
 ["T", "R", "E", "E", "H", "O", "U", "S", "E"],
   ["J","A","V","A","S","C","R","I","P","T"],
   ["W","E","B","D","E","S","I","G","N"],
   ["E","D","U","C","A","T","I","O","N"],
   ["C","H","O","C","O","L","A","T","E"],
   ["G","E","R","M","A","N","Y"]
-]
+]*/
 
 var random = Math.floor((Math.random()*(lstofwords.length-1))); 
 
@@ -21,9 +21,8 @@ for (var i = 0; i < blkspaces.length; i++){
 function wordload(){   
 	window.alert("Hello!");
 	$.get('smpl.txt', function(data) {
-	var lines = data.split("\n");
-	lines.map(function(x){ return x.toUpperCase() })
-   //console.log(lines[0]);
+	var lstofwords = data.split("\n");
+	lstofwords.map(function(x){ return x.toUpperCase() })
 });
 }
 
@@ -84,7 +83,6 @@ var checkLetter = function(){
 }
 
 function init(){
-	window.alert("Hello!");
 	wordload();
 	printblkspaces();
 }
