@@ -7,11 +7,18 @@
   ["G","E","R","M","A","N","Y"]
 ]*/
 
-$.get('smpl.txt', function(data) {
+/*$.get('smpl.txt', function(data) {
 	var lstofwords = data.split("\n");
 	lstofwords.map(function(x){ return x.toUpperCase() });
 	console.log(lstofwords);
-}).done(function(){
+});*/
+
+var file = "smpl.txt";
+var reader = new FileReader();
+reader.onload = function(progressEvent){
+	var lstofwords = this.result.split('\n');
+};
+reader.readAsText(file);
 
 var random = Math.floor((Math.random()*(lstofwords.length-1))); 
 var nword = lstofwords[random]; // the word to guess will be chosen from the array above
@@ -83,4 +90,3 @@ function init(){
 	printblkspaces();
 }
 window.onload = init;
-});
