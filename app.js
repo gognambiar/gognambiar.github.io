@@ -1,3 +1,4 @@
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
 /*var lstofwords = [
 ["T", "R", "E", "E", "H", "O", "U", "S", "E"],
   ["J","A","V","A","S","C","R","I","P","T"],
