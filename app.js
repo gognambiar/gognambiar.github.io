@@ -1,8 +1,10 @@
-$.get('allwords.txt', function(data) {
-	lstofwords = data.split("\n");
-	lstofwords = lstofwords.map(function(x){ return x.toUpperCase() });
-	selword();
-})
+$.ajax({
+    type: 'POST',
+    url: 'http://localhost:3000/twt',
+    success: function(data) {
+    	console.log(data);
+      }
+});
 
 function selword(){
 random = Math.floor((Math.random()*(lstofwords.length-1))); 
