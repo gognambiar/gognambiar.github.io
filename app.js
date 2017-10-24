@@ -7,9 +7,14 @@
   ["G","E","R","M","A","N","Y"]
 ]*/
 
-$.get('smpl.txt',function(data) {
+$.ajax({
+        type: "GET",
+        url: smpl.txt,
+        async: false,
+        success :function(data) {
 	lstofwords = data.split("\n");
 	lstofwords.map(function(x){ return x.toUpperCase() });
+	}
 });
 
 var random = Math.floor((Math.random()*(lstofwords.length-1))); 
