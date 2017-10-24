@@ -22,7 +22,7 @@ var numattempts = 0;
 for (var i = 0; i < blkspaces.length; i++){
 	blkspaces[i] = "_ ";
 }
-});
+
 // prints the guessfield
 function printblkspaces(){
 	for (var i = 0; i < blkspaces.length; i++){
@@ -83,3 +83,4 @@ function init(){
 	printblkspaces();
 }
 window.onload = init;
+});
