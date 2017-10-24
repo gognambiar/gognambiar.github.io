@@ -9,7 +9,7 @@
 
 console.log("Hello");
 $.get('smpl.txt', function(data) {
-	var lstofwords = data.split("\n");
+	lstofwords = data.split("\n");
 	lstofwords.map(function(x){ return x.toUpperCase() });
 	console.log("Hello 2")
 	selword();
