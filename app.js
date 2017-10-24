@@ -16,8 +16,8 @@ $.get('smpl.txt', function(data) {
 })
 
 function selword(){
-var random = Math.floor((Math.random()*(lstofwords.length-1))); 
-var nword = lstofwords[random]; // the word to guess will be chosen from the array above
+random = Math.floor((Math.random()*(lstofwords.length-1))); 
+nword = lstofwords[random]; // the word to guess will be chosen from the array above
 blkspaces = new Array(nword.length);
 
 // every letter in the word is symbolized by an underscore in the guessfield
