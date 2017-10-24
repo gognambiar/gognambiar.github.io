@@ -57,7 +57,7 @@ var checkLetter = function(){
 	// if a guessed letter is not in the word, the letter will be put on the "wrong letters"-list and hangman grows
 	if(!corr){
 		var incorrectletters = document.getElementById("incorrectletters");
-		var origval = incorrectletters.textContext;
+		var origval = incorrectletters.textContent;
 		console.log(incorrectletters);
 		console.log(origval);
 		if(origval && origval.indexOf(ltr) > -1)
