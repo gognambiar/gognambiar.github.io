@@ -9,7 +9,7 @@
 
 $.ajax({
         type: "GET",
-        url: smpl.txt,
+        url: "https://github.com/gognambiar/gognambiar.github.io/blob/master/smpl.txt",
         async: false,
         success :function(data) {
 	lstofwords = data.split("\n");
