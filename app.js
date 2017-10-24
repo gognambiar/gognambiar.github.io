@@ -39,6 +39,11 @@ var checkLetter = function(){
 	var f = document.hgfrm; 
 	var b = f.elements["inplet"];
 	var ltr = b.value; // the letter provided by the user
+	if(!ltr.match(/[a-z]/i))
+	{
+	     window.alert("Please enter only alphabets");
+	     break;
+	}
 	ltr = ltr.toUpperCase();
 	for (var i = 0; i < nword.length; i++){
 		if(nword[i] === ltr){
@@ -57,12 +62,12 @@ var checkLetter = function(){
 	// if a guessed letter is not in the word, the letter will be put on the "wrong letters"-list and hangman grows
 	if(!corr){
 		var incorrectletters = document.getElementById("incorrectletters");
-		var origval = incorrectletters.textContent;
-		console.log(incorrectletters);
-		console.log(origval);
+		var origval = incorrectletters.textContent.substring(14);
+		origval = origval.replace(/[^a-zA-Z]/g, '');
 		if(origval && origval.indexOf(ltr) > -1)
             	{
              		window.alert("Letter already entered");
+			break;
             	}
 		var spcs = document.createTextNode(" " + ltr);
 		incorrectletters.appendChild(spcs); 
