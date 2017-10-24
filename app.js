@@ -1,6 +1,6 @@
 $.ajax({
     type: 'POST',
-    url: 'http://localhost:3000/twt',
+    url: 'https://localhost:3000/twt',
     success: function(data) {
     	console.log(data);
       }
