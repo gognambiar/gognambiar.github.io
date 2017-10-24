@@ -15,10 +15,12 @@
 
 var file = "smpl.txt";
 var reader = new FileReader();
-reader.onload = function(progressEvent){
-	var lstofwords = this.result.split('\n');
-};
-reader.readAsText(file);
+
+reader.addEventListener("loadend", function() {
+   var data = reader.result;
+   var lstofwords = data.split("\n");
+});
+reader.readAsText(blob);
 
 var random = Math.floor((Math.random()*(lstofwords.length-1))); 
 var nword = lstofwords[random]; // the word to guess will be chosen from the array above
