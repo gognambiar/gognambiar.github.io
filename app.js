@@ -58,6 +58,8 @@ var checkLetter = function(){
 	if(!corr){
 		var incorrectletters = document.getElementById("incorrectletters");
 		var origval = incorrectletters.value;
+		console.log(incorrectletters);
+		console.log(origval);
 		if(origval && origval.indexOf(ltr) > -1)
             	{
              		window.alert("Letter already entered");
