@@ -6,25 +6,21 @@
   ["C","H","O","C","O","L","A","T","E"],
   ["G","E","R","M","A","N","Y"]
 ]*/
+var MyProject = {};
 
-function wordload(){
 $.get('smpl.txt', function(data) {
-	var lstofwords = data.split("\n");
-	lstofwords.map(function(x){ return x.toUpperCase() });
+	MyProject.lstofwords = data.split("\n");
+	MyProject.lstofwords.map(function(x){ return x.toUpperCase() });
 })
-}
 
-function wordsel()
-{
-var random = Math.floor((Math.random()*(lstofwords.length-1))); 
-var nword = lstofwords[random]; // the word to guess will be chosen from the array above
+var random = Math.floor((Math.random()*(MyProject.lstofwords.length-1))); 
+var nword = MyProject.lstofwords[random]; // the word to guess will be chosen from the array above
 var blkspaces = new Array(nword.length);
 var numattempts = 0;
 
 // every letter in the word is symbolized by an underscore in the guessfield
 for (var i = 0; i < blkspaces.length; i++){
 	blkspaces[i] = "_ ";
-}
 }
 // prints the guessfield
 function printblkspaces(){
@@ -83,8 +79,6 @@ var checkLetter = function(){
 }
 
 function init(){
-	wordload();
-	wordsel();
 	printblkspaces();
 }
 window.onload = init;
