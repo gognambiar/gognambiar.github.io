@@ -6,10 +6,15 @@
   ["C","H","O","C","O","L","A","T","E"],
   ["G","E","R","M","A","N","Y"]
 ]*/
+
+$.ajax({
+  method: 'GET',
+  async: false
+});
+
 $.get('smpl.txt', function(data) {
 	window.lstofwords = data.split("\n");
 	lstofwords.map(function(x){ return x.toUpperCase() });
-	console.log(lstofwords);
 });
 
 var random = Math.floor((Math.random()*(lstofwords.length-1))); 
