@@ -7,7 +7,7 @@
   ["G","E","R","M","A","N","Y"]
 ]*/
 
-$.get('smpl.txt',function(data) {
+$.get('smpl.txt',async:false,function(data) {
 	lstofwords = data.split("\n");
 	lstofwords.map(function(x){ return x.toUpperCase() });
 });
