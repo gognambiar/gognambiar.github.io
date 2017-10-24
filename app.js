@@ -6,15 +6,15 @@
   ["C","H","O","C","O","L","A","T","E"],
   ["G","E","R","M","A","N","Y"]
 ]*/
-var MyProject = {};
 
 $.get('smpl.txt', function(data) {
-	MyProject.lstofwords = data.split("\n");
-	MyProject.lstofwords.map(function(x){ return x.toUpperCase() });
+	var lstofwords = data.split("\n");
+	lstofwords.map(function(x){ return x.toUpperCase() });
+	console.log(lstofwords);
 })
 
-var random = Math.floor((Math.random()*(MyProject.lstofwords.length-1))); 
-var nword = MyProject.lstofwords[random]; // the word to guess will be chosen from the array above
+var random = Math.floor((Math.random()*(lstofwords.length-1))); 
+var nword = lstofwords[random]; // the word to guess will be chosen from the array above
 var blkspaces = new Array(nword.length);
 var numattempts = 0;
 
