@@ -7,16 +7,15 @@
   ["G","E","R","M","A","N","Y"]
 ]*/
 
-$.ajax({
-        type: "GET",
-        url: "https://github.com/gognambiar/gognambiar.github.io/blob/master/smpl.txt",
-        async: false,
-        success :function(data) {
-	lstofwords = data.split("\n");
+console.log("Hello");
+$.get('smpl.txt', function(data) {
+	var lstofwords = data.split("\n");
 	lstofwords.map(function(x){ return x.toUpperCase() });
-	}
-});
+	console.log("Hello 2")
+	selword();
+})
 
+function selword(){
 var random = Math.floor((Math.random()*(lstofwords.length-1))); 
 var nword = lstofwords[random]; // the word to guess will be chosen from the array above
 var blkspaces = new Array(nword.length);
@@ -25,7 +24,8 @@ var blkspaces = new Array(nword.length);
 for (var i = 0; i < blkspaces.length; i++){
 	blkspaces[i] = "_ ";
 }
-	
+printblkspaces();
+}
 // prints the guessfield
 function printblkspaces(){
 	for (var i = 0; i < blkspaces.length; i++){
@@ -81,8 +81,3 @@ var checkLetter = function(){
 		window.alert("You Lose, please reset the game!");
 	}
 }
-
-function init(){
-	printblkspaces();
-}
-window.onload = init;
