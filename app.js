@@ -9,9 +9,8 @@
 var lstofwords;
 
 $.get('smpl.txt', function(data) {
-    lstofwords = data.split("\n");
+    var lstofwords = data.split("\n");
     lstofwords.map(function(x){ return x.toUpperCase() });
-    console.log(lstofwords[2]);
 });
 
 var random = Math.floor((Math.random()*(lstofwords.length-1))); 
