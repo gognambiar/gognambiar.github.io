@@ -37,7 +37,7 @@ function printblkspaces(){
 //checks if the the letter provided by the user matches one or more of the letters in the word
 var checkLetter = function(){
 	var f = document.hgfrm; 
-	var b = f.elements["inplet"]; 
+	var b = f.elements["inplet"];
 	var ltr = b.value; // the letter provided by the user
 	ltr = ltr.toUpperCase();
 	for (var i = 0; i < nword.length; i++){
@@ -57,6 +57,11 @@ var checkLetter = function(){
 	// if a guessed letter is not in the word, the letter will be put on the "wrong letters"-list and hangman grows
 	if(!corr){
 		var incorrectletters = document.getElementById("incorrectletters");
+		var origval = incorrectletters.value;
+		if(origval.indexOf(ltr) > -1)
+            	{
+             		window.alert("Letter already entered");
+            	}
 		var spcs = document.createTextNode(" " + ltr);
 		incorrectletters.appendChild(spcs); 
 		numattempts++;
