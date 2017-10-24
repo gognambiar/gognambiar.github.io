@@ -1,12 +1,3 @@
-/*var lstofwords = [
-["T", "R", "E", "E", "H", "O", "U", "S", "E"],
-  ["J","A","V","A","S","C","R","I","P","T"],
-  ["W","E","B","D","E","S","I","G","N"],
-  ["E","D","U","C","A","T","I","O","N"],
-  ["C","H","O","C","O","L","A","T","E"],
-  ["G","E","R","M","A","N","Y"]
-]*/
-
 $.get('allwords.txt', function(data) {
 	lstofwords = data.split("\n");
 	lstofwords = lstofwords.map(function(x){ return x.toUpperCase() });
