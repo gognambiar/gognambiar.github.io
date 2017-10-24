@@ -17,6 +17,7 @@ function selword(){
 random = Math.floor((Math.random()*(lstofwords.length-1))); 
 nword = lstofwords[random]; // the word to guess will be chosen from the array above
 blkspaces = new Array(nword.length);
+numattempts = 0;
 
 // every letter in the word is symbolized by an underscore in the guessfield
 for (var i = 0; i < blkspaces.length; i++){
