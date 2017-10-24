@@ -7,11 +7,9 @@
   ["G","E","R","M","A","N","Y"]
 ]*/
 
-console.log("Hello");
 $.get('smpl.txt', function(data) {
 	lstofwords = data.split("\n");
 	lstofwords.map(function(x){ return x.toUpperCase() });
-	console.log("Hello 2")
 	selword();
 })
 
