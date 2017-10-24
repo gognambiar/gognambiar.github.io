@@ -7,9 +7,8 @@
   ["G","E","R","M","A","N","Y"]
 ]*/
 $.get('smpl.txt', function(data) {
-    var lines = data.split("\n");
-    lines.map(function(x){ return x.toUpperCase() })
-    console.log(lines[0]);
+    var lstofwords = data.split("\n");
+    lstofwords.map(function(x){ return x.toUpperCase() })
 });
 
 var random = Math.floor((Math.random()*(lstofwords.length-1))); 
