@@ -6,7 +6,7 @@
   ["C","H","O","C","O","L","A","T","E"],
   ["G","E","R","M","A","N","Y"]
 ]*/
-var lstofwords;
+var lstofwords = [[]];
 
 $.get('smpl.txt', function(data) {
     var lstofwords = data.split("\n");
