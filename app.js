@@ -42,7 +42,7 @@ var checkLetter = function(){
 	if(!ltr.match(/[a-z]/i))
 	{
 	     window.alert("Please enter only alphabets");
-	     break;
+	     return "";
 	}
 	ltr = ltr.toUpperCase();
 	for (var i = 0; i < nword.length; i++){
@@ -67,7 +67,7 @@ var checkLetter = function(){
 		if(origval && origval.indexOf(ltr) > -1)
             	{
              		window.alert("Letter already entered");
-			break;
+			return "";
             	}
 		var spcs = document.createTextNode(" " + ltr);
 		incorrectletters.appendChild(spcs); 
