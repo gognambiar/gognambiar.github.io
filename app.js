@@ -11,8 +11,8 @@ var blkspaces = null
 var numattempts = 0;
 
 function wordload(){
-$.get('smpl.txt',async:false,function(data) {
-	window.lstofwords = data.split("\n");
+$.get('smpl.txt',function(data) {
+	lstofwords = data.split("\n");
 	lstofwords.map(function(x){ return x.toUpperCase() });
 });
 assignval();
